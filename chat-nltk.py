@@ -317,11 +317,11 @@ def chatbot():
 
 
 
-#if __name__ == '__main__':
-#    socketio.run(app, debug=True, port=5001)
-
 if __name__ == '__main__':
-    import eventlet
-    eventlet.monkey_patch()  # Asegúrate de parchear el entorno para compatibilidad
-    socketio.run(app, host='0.0.0.0', port=5000)
+    socketio.run(app, debug=True, port=5001)
+
+#if __name__ == '__main__':
+#   import eventlet
+#   eventlet.monkey_patch()  # Asegúrate de parchear el entorno para compatibilidad
+#   socketio.run(app, host='0.0.0.0', port=5000)
 
