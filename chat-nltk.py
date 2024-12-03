@@ -1,3 +1,5 @@
+import eventlet
+eventlet.monkey_patch()  # Asegúrate de parchear el entorno para compatibilidad
 from flask import Flask, request, jsonify
 from flask_socketio import SocketIO, emit
 from flasgger import Swagger
@@ -317,11 +319,14 @@ def chatbot():
 
 
 
+#f __name__ == '__main__':
+#   socketio.run(app, debug=True, port=5001)
+#
+#
+
 #if __name__ == '__main__':
-#    socketio.run(app, debug=True, port=5001)
+#    app.run(host='0.0.0.0', debug=True, port=5001)
 
 if __name__ == '__main__':
-   import eventlet
-   eventlet.monkey_patch()  # Asegúrate de parchear el entorno para compatibilidad
    socketio.run(app, host='0.0.0.0', port=5000)
 
